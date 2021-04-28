@@ -8,8 +8,8 @@ app.use(express.urlencoded({ extended: false }));
 
 const indexController = require('./controllers/index');
 
-app.use('/', indexController);
+app.use('/bookmarks', indexController);
 
 app.listen(process.env.PORT || port, () => {
-	console.log(`Bookmarks app listening at http://localhost:(${port})`);
+	console.log(`Rock, paper, scissors app listening at http://localhost:${port}`);
 })

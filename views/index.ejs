@@ -8,6 +8,25 @@
 </head>
 <body>
 	<h1>Bookmark Manager</h1>
-	
+	<form action="/bookmarks" method="post">
+		<input id="add-text" type="text" name="addBookmark">
+		<input id="add-button" type="submit" value="Add bookmark">
+	</form>
+	<ul id="bookmarks">
+		<% bookmarks.forEach((bookmark, index) => { %>
+			<li id=<%= `bookmark-${index}` %>>
+				<span><%= bookmark.url %></span>
+				<form action="/bookmarks" method="post">
+					<input type="hidden" name="urlToDelete" value=<%= bookmark.url %> >
+					<input id=<%= `delete-${index}` %>  type="submit" value="Delete">
+				</form>
+				<form action=<%= `/bookmarks` %>  method="post">
+					<input type="hidden" name="updateBookmarkId" value=<%= bookmark.id %> >
+					<input type="text" name="updateUrl" id=<% `update-text${index}` %>>
+					<input id=<%= `update-${index}` %> type="submit" value="Update">
+				</form>
+			</li>
+		<% }) %> 
+	</ul>
 </body>
 </html>

@@ -14,11 +14,14 @@
   },
   "author": "AntMousinho",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AntMousinho/bookmark-manager/issues"
+  },
+  "homepage": "https://github.com/AntMousinho/bookmark-manager#readme",
   "devDependencies": {
-    "cypress": "^7.1.0",
-    "eslint": "^7.25.0",
-    "jasmine": "^3.7.0",
-    "nodemon": "^2.0.7"
+    "cypress": "^7.2.0",
+    "nodemon": "^2.0.7",
+    "sequelize-cli": "^6.2.0"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
@@ -27,9 +30,5 @@
     "pg": "^8.6.0",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.6.2"
-  },
-  "bugs": {
-    "url": "https://github.com/AntMousinho/bookmark-manager/issues"
-  },
-  "homepage": "https://github.com/AntMousinho/bookmark-manager#readme"
+  }
 }
